@@ -15,10 +15,21 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
         <header>
-            <img src="" alt="Logo spotify">
+            <img src="https://cdn.icon-icons.com/icons2/3685/PNG/512/spotify_logo_icon_229290.png" alt="Logo spotify">
         </header>
         <main>
-
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-cs" v-for="card in items">
+                        <div class="card-item text-center">
+                            <img :src="card.poster" alt="poster Imager">
+                            <h5 class="fw-bold text-white">{{card.title}}</h5>
+                            <h6 class="text-white">{{card.author}}</h6>
+                            <h5 class="fw-bold text-white">{{card.year}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <script src="./script/main.js"></script>
