@@ -1,0 +1,9 @@
+header {
+    background-color: #06131f;
+    padding: 2rem;
+}
+
+main {
+    height: calc(100vh - 90.5px);
+    background-color: #1d2d3c;
+}

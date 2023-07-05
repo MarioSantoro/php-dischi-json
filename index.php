@@ -13,7 +13,12 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
+        <header>
+            <img src="" alt="Logo spotify">
+        </header>
+        <main>
 
+        </main>
     </div>
     <script src="./script/main.js"></script>
 </body>
