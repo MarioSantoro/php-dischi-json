@@ -20,8 +20,8 @@
         <main>
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-cs" v-for="card in items">
-                        <div class="card-item text-center">
+                    <div class="col-cs" v-for="(card , index) in items">
+                        <div class="card-item text-center" @click="getDisc(index), removeDisplayNone()">
                             <img :src="card.poster" alt="poster Imager">
                             <h5 class="fw-bold text-white">{{card.title}}</h5>
                             <h6 class="text-white">{{card.author}}</h6>
@@ -30,7 +30,19 @@
                     </div>
                 </div>
             </div>
+
         </main>
+        <div class="container-card-disactivated justify-content-center align-items-center">
+            <button class="btn btn-primary position-absolute top-0 end-0 delete" @click="addDisplayNone()">X</button>
+            <div class="card-disactivated" v-for="(card , index) in items">
+                <div class="card-item text-center" @click="getDisc(index)" :class="index === activeIndex ? 'active' : '' ">
+                    <img :src="card.poster" alt="poster Imager">
+                    <h5 class="fw-bold text-white">{{card.title}}</h5>
+                    <h6 class="text-white">{{card.author}}</h6>
+                    <h5 class="fw-bold text-white">{{card.year}}</h5>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./script/main.js"></script>
 </body>
